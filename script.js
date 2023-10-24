@@ -1,5 +1,3 @@
-// script.js
-
 const addButton = document.getElementById("add-course-button");
 const calculateButton = document.getElementById("calculate-button");
 const tableBody = document.getElementById("table-body");

@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(53, 49, 49);
+    background: url("image/lasu.png");
 }
 
 main.table {
@@ -30,7 +30,7 @@ main.table {
     padding: .8rem 1rem;
 }
 
-.table_body {
+.table_body, .estimated_cgpa {
     width: 95%;
     max-height: calc(89% - .8rem);
     background-color: #fffb;
@@ -40,7 +40,7 @@ main.table {
     text-align: center;
 }
 
-.table_body::-webkit-scrollbar, main.table::-webkit-scrollbar{
+.table_body::-webkit-scrollbar, main.table::-webkit-scrollbar, .estimated_cgpa::-webkit-scrollbar{
     width: 0.5rem;
     height: 0.5rem;
 }
@@ -51,7 +51,7 @@ main.table {
     visibility: hidden;
 }
 
-.table_body:hover::-webkit-scrollbar-thumb, main.table:hover::-webkit-scrollbar{
+.table_body:hover::-webkit-scrollbar-thumb, main.table:hover::-webkit-scrollbar, .estimated_cgpa:hover::-webkit-scrollbar{
     visibility: visible;
 }
 
@@ -117,5 +117,12 @@ tbody tr:hover {
 @media (max-width: 1000px) {
     td:not(:first-of-type) {
         min-width: 12.1rem;
+    }
+    div {
+        display: flex;
+    }
+    button {
+        height: 50px;
+        font-size: medium;
     }
 }
