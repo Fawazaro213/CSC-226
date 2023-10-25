@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA CALCULTOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="table">
+        <section class="table_header">
+            <h1>CGPA CALCULATOR</h1>
+        </section>
+        <section class="table_body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Course</th>
+                        <th class="desktop-only">Unit</th>
+                        <th class="desktop-only">Status</th>
+                        <th class="desktop-only">GP</th>
+                        <th class="desktop-only">Credit Point</th>
+
+                        <th class="mobile-only"></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- <tr>
+                        <td id="no"> 1 </td>
+                        <td id="course"> CSC 101 </td>
+                        <td id="unit"> 3 </td>
+                        <td id="status"> C </td>
+                        <td id="gp"> 5 </td>
+                        <td id="cp"> 15 </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+
+        <div id="edit-course-modal" class="modal">
+            <div class="modal-header">
+                <h4>Edit Course</h4>
+
+                <button id="edit-course-modal-close-btn">Close</button>
+            </div>
+
+            <form id="edit-course-modal-form">
+                <div class="input-container">
+                    <label for="edit-course-modal-id-value">ID</label>
+                    <p id="edit-course-modal-id-value"></p>
+                </div>
+
+                <div>
+                    <label for="edit-course-modal-course-input">Course</label>
+                    <input type="text" placeholder="Course" id="edit-course-modal-course-input" />
+                </div>
+
+                <div class="input-container">
+                    <label for="edit-course-modal-unit-input">Unit</label>
+                    <input type="number" placeholder="Unit" id="edit-course-modal-unit-input" />
+                </div>
+
+                <div class="input-container">
+                    <label for="edit-course-modal-status-input">Status</label>
+                    <input type="text" placeholder="Status" id="edit-course-modal-status-input" />
+                </div>
+
+                <div class="input-container">
+                    <label for="edit-course-modal-gp-input">GP</label>
+                    <input type="number" placeholder="GP" id="edit-course-modal-gp-input" />
+                </div>
+
+                <div class="input-container">
+                    <label for="edit-course-modal-credit-point-value">Credit Point</label>
+                    <p id="edit-course-modal-credit-point-value"></p>
+                </div>
+
+                <button type="submit">Update</button>
+            </form>
+        </div>
+
+        <div id="add-course-modal" class="modal">
+            <div class="modal-header">
+                <h4>Add Course</h4>
+
+                <button id="add-course-modal-close-btn">Close Modal</button>
+            </div>
+
+            <form id="add-course-modal-form">
+                <div>
+                    <label for="add-course-modal-course-input">Course</label>
+                    <input type="text" placeholder="Course" id="add-course-modal-course-input" />
+                </div>
+
+                <div class="input-container">
+                    <label for="add-course-modal-unit-input">Unit</label>
+                    <input type="number" placeholder="Unit" id="add-course-modal-unit-input" />
+                </div>
+
+                <div class="input-container">
+                    <label for="add-course-modal-status-input">Status</label>
+                    <input type="text" placeholder="Status" id="add-course-modal-status-input" />
+                </div>
+
+                <div class="input-container">
+                    <label for="add-course-modal-gp-input">GP</label>
+                    <input type="number" placeholder="GP" id="add-course-modal-gp-input" />
+                </div>
+
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <p id="no-course-message" style="margin-left: 2rem !important">No course added yet</p>
+
+        <div style="display: flex; margin-left: 1.5rem;">
+            <button id="add-course-button">Add Course</button>
+            <button id="calculate-button" style="margin-left: 1rem;">Calculate</button>
+        </div>
+
+        <section class="estimated_cgpa">
+            <h2>Estimated CGPA</h2>
+            <table id="estimated-cgpa-table">
+                <thead>
+                    <tr>
+                        <th>Total Credit Points</th>
+                        <th>Total Units</th>
+                        <th>Estimated CGPA</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body-2">
+                    <tr>
+                        <td id="total-credit-points">0</td>
+                        <td id="total-units">0</td>
+                        <td id="estimated-cgpa">0.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
